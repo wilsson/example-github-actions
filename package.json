@@ -1,0 +1,13 @@
+{
+  "name": "example-github-actions",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "wilsson",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "jest": "^26.4.2"
+  }
+}
