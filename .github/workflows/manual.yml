@@ -6,10 +6,13 @@ on:
       message:
         description: 'message'
         default: 'Hello World'
+      moji:
+        default: ':)'
+        required: true
 
 jobs:
   greet:
     runs-on: ubuntu-latest
     steps:
         - name: Send greeting
-          run: echo "Message -> ${{ github.event.inputs.description }}"
+          run: echo "Message -> ${{ github.event.inputs.message }} ${{ github.event.inputs.moji }}"
