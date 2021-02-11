@@ -1,0 +1,12 @@
+name: New Release
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send message for new release
+        run: echo "Message release"
