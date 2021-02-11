@@ -5,12 +5,25 @@ on:
     types: [published]
 
 jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build
+        run: echo "Building..."
+  test:
+    needs: lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build
+        run: echo "Building..."
   build:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Build
         run: echo "Building..."
   deploy:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Deploy 1
