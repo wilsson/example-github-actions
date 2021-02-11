@@ -5,8 +5,15 @@ on:
     types: [published]
 
 jobs:
-  greet:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Send message for new release
-        run: echo "Message release"
+      - name: Build
+        run: echo "Building..."
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy 1
+        run: echo "Deployment..."
+      - name: Deploy 2
+        run: echo "Deployment..."
